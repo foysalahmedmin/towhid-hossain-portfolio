@@ -1,13 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import CommercialSuccess from './pages/CommercialSuccess';
-import LeadingRole from './pages/LeadingRole';
-import Awards from './pages/Awards';
-import News from './pages/News';
-import GlobalEngagement from './pages/GlobalEngagement';
-import Contact from './pages/Contact';
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Awards from "./pages/Awards";
+import CommercialSuccess from "./pages/CommercialSuccess";
+import Contact from "./pages/Contact";
+import GlobalEngagement from "./pages/GlobalEngagement";
+import Home from "./pages/Home";
+import LeadingRole from "./pages/LeadingRole";
+import News from "./pages/News";
 
 function App() {
   return (

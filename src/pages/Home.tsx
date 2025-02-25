@@ -63,28 +63,28 @@ export default function Home() {
   const testimonials = [
     {
       quote:
-        "Mr. Towhid Hossain’s leadership and dedication have been pivotal in elevating FIFOTech and Bangladesh’s ICT sector on the global stage.",
+        "Through his leadership and dedication, Mr. Towhid Hossain has played a key role in elevating FIFOTech and Bangladesh’s ICT sector on the global stage.",
       author: "Abdullah Hel Kafi",
       position: "Lifetime Honorary Chairman",
       company: "ASOCIO Former President, BCS",
     },
     {
       quote:
-        "Mr. Towhid Hossain’s mentorship and leadership have been instrumental in empowering women in technology and fostering digital innovation.",
+        "Mr. Towhid Hossain’s mentorship has been a driving force in empowering women in technology and advancing digital innovation.",
       author: "Achia Nila",
-      position: "DFounder & CEO",
+      position: "Founder & CEO",
       company: "Women in Digital",
     },
     {
       quote:
-        "Mr. Towhid Hossain’s leadership has been transformative for the BPO industry, driving FIFOTech’s global success and fostering innovation.",
+        "Under Mr. Towhid Hossain’s leadership, FIFOTech has achieved remarkable global success, pushing the boundaries of innovation in the BPO industry.",
       author: "Haroonor Rashid",
       position: "CEO",
       company: "Sameer Inc.",
     },
     {
       quote:
-        "Mr. Towhid Hossain’s visionary leadership has propelled FIFOTech to global prominence, while his compassion and dedication to mentoring have made a lasting impact on the BPO industry.",
+        "With vision and leadership, Mr. Towhid Hossain propelled FIFOTech globally while making a lasting impact through mentorship in the BPO sector.",
       author: "Wajed Roger Salam",
       position: "Founder & CEO",
       company: "USA Property Network, LLC",
@@ -109,10 +109,9 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <header className="relative h-[60vh] bg-gradient-to-r from-blue-600 to-blue-800 pt-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative container mx-auto px-6 h-full flex items-center">
-          <div className="text-white max-w-3xl">
+      <header className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-20 mb-20">
+        <div className="container mx-auto px-6 text-white">
+          <div className="max-w-3xl">
             <h1 className="text-5xl font-bold mb-4">Towhid Hossain</h1>
             <p className="text-xl mb-6">
               Project Management and BPO Professional
@@ -171,19 +170,19 @@ export default function Home() {
                 and economic innovation.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-start space-x-2">
                   <Briefcase className="text-blue-600" />
                   <span>Business Strategy</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-start space-x-2">
                   <Users className="text-blue-600" />
                   <span>Community Building</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-start space-x-2">
                   <Award className="text-blue-600" />
                   <span>Leadership</span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-start space-x-2">
                   <Calendar className="text-blue-600" />
                   <span>Project Management</span>
                 </div>

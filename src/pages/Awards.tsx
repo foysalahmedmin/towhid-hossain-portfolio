@@ -269,9 +269,9 @@ export default function Awards() {
   ];
 
   return (
-    <div className="py-20 bg-white">
+    <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-24 mb-20">
+      <div className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-20 mb-20">
         <div className="container mx-auto px-6 text-white">
           <h1 className="text-4xl font-bold mb-6">Awards & Recognition</h1>
           <p className="text-xl opacity-90 max-w-2xl">
@@ -329,11 +329,12 @@ export default function Awards() {
                 </div>
                 <div className="mt-6">
                   <a
-                    className="text-blue-600 cursor-pointer hover:underline"
+                    className="text-blue-600 inline-flex items-center gap-2 cursor-pointer hover:underline"
                     target="_blank"
                     href={award?.link}
                   >
-                    Read More
+                    <span>Read More</span>
+                    <ArrowRight className="size-4" />
                   </a>
                 </div>
               </div>

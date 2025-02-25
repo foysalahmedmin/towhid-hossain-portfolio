@@ -18,11 +18,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <nav className="sticky top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="text-2xl font-bold text-blue-600">
-            TH
+            TOWHID HOSSAIN
           </Link>
 
           {/* Desktop Navigation */}

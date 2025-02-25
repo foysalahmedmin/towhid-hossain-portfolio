@@ -16,6 +16,7 @@ export default function LeadingRole() {
       position: "Managing Director & CEO",
       company: "FIFOTech",
       websiteLink: "https://fifo-tech.com/",
+      image: "/fifo-tech-logo.jpeg",
       period: "2004 - Present",
       overview:
         "Leading a pioneering IT firm with 350+ in-house employees and 700+ remote staff, driving operational excellence, service quality, and strategic mergers to enhance industry leadership.",
@@ -31,6 +32,7 @@ export default function LeadingRole() {
       position: "Co-Founder & Managing Director",
       company: "Golden Fiber Asia",
       websiteLink: "https://goldenfiberasia.com/",
+      image: "/golden-fiber-logo.jpg",
       period: "2016 - Present",
       overview:
         "Steering the company toward eco-friendly solutions by promoting jute-based products, expanding domestic and international market reach, and advancing infrastructure development.",
@@ -44,6 +46,7 @@ export default function LeadingRole() {
       position: "Co-Founder & Managing Director",
       company: "Shera Bangla 64",
       websiteLink: "https://sherabangla64.com/",
+      image: "/shera-bangla64-logo.png",
       period: "2020 - Present",
       overview:
         "Enhancing culinary traditions and expanding market reach for a leading Bangladeshi restaurant chain, both locally and internationally.",
@@ -57,6 +60,7 @@ export default function LeadingRole() {
       position: "Editor",
       company: "Dainik Eidin",
       websiteLink: "https://www.dainikeidin.com/",
+      image: "",
       period: "2019 - Present",
       overview:
         "Driving the company’s vision towards becoming a trusted news platform by leading infrastructure development and enhancing content quality.",
@@ -70,6 +74,7 @@ export default function LeadingRole() {
       position: "Owner",
       company: "FIFOTech Marketing and Social Media Services",
       websiteLink: "https://fifo-tech.com/",
+      image: "",
       period: "2020 - Present",
       overview:
         "Providing innovative and reliable social media marketing services, growing the company’s global reach, and delivering tailored digital marketing solutions.",
@@ -83,6 +88,7 @@ export default function LeadingRole() {
       position: "Former Secretary General",
       company: "Bangladesh Association of Contact Center & Outsourcing (BACCO)",
       websiteLink: "https://www.bacco.org.bd/ec_committee/present_ec_committe",
+      image: "",
       period: "2010 - 2024",
       overview:
         "Led initiatives in IT regulations, governance of BTRC, and growth of the contact center/BPO industry, training over 20,000 students under national skills programs.",
@@ -273,7 +279,7 @@ export default function LeadingRole() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-24">
+      <div className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-24">
         <div className="container mx-auto px-6 text-white">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-bold mb-6">Leadership & Impact</h1>
@@ -289,29 +295,29 @@ export default function LeadingRole() {
       {/* Current Role Overview */}
       <div className="py-20">
         <div className="container space-y-12 mx-auto px-6">
-          {professionalExperience?.map((currentRole, i) => (
+          {professionalExperience?.map((experience, i) => (
             <div
               key={i}
               className="bg-gray-50 group rounded-2xl p-8 md:p-12 shadow-lg"
             >
-              <div className="flex flex-col md:flex-row md:group-even:flex-row-reverse md:gap-12 md:items-start">
+              <div className="flex flex-col md:flex-row md:group-even:flex-row-reverse md:gap-12 md:items-center">
                 <div className="md:w-2/3">
                   <h2 className="text-3xl font-bold mb-4">
-                    {currentRole.position}
+                    {experience.position}
                   </h2>
                   <div className="text-blue-600 text-lg mb-6">
                     <a
                       className="hover:underline cursor-pointer"
-                      href={currentRole?.websiteLink}
+                      href={experience?.websiteLink}
                       target="_blank"
                     >
-                      {currentRole?.company}
+                      {experience?.company}
                     </a>{" "}
-                    | <span>{currentRole?.period}</span>
+                    | <span>{experience?.period}</span>
                   </div>
-                  <p className="text-gray-700 mb-8">{currentRole.overview}</p>
+                  <p className="text-gray-700 mb-8">{experience.overview}</p>
                   <div className="grid md:grid-cols-2 gap-4">
-                    {currentRole.keyResponsibilities.map(
+                    {experience.keyResponsibilities.map(
                       (responsibility, index) => (
                         <div
                           key={index}
@@ -324,13 +330,20 @@ export default function LeadingRole() {
                     )}
                   </div>
                 </div>
-                <div className="hidden md:block md:w-1/3">
+                <a
+                  href={experience?.websiteLink}
+                  target="_blank"
+                  className="hidden md:block md:w-1/3"
+                >
                   <img
-                    src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800"
+                    src={
+                      experience?.image ||
+                      "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800"
+                    }
                     alt="Office"
                     className="rounded-lg shadow-lg"
                   />
-                </div>
+                </a>
               </div>
             </div>
           ))}

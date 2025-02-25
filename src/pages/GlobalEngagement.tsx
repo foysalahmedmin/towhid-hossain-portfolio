@@ -139,7 +139,7 @@ export default function GlobalEngagement() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative h-[60vh] overflow-hidden">
+      <div className="relative min-h-[60vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
           alt="Global Engagement"
