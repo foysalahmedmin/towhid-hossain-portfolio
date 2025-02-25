@@ -1,76 +1,78 @@
-import React from 'react';
-import { Globe, Users, Briefcase, Map, Target, BarChart as ChartBar, Lightbulb, ArrowRight, Calendar, MapPin, Building, Award, CheckCircle } from 'lucide-react';
+import { ArrowRight, Calendar, CheckCircle, MapPin, Users } from "lucide-react";
 
 export default function GlobalEngagement() {
   const globalPresence = [
     {
       region: "North America",
-      image: "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&q=80&w=1400",
+      image:
+        "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&q=80&w=1400",
       metrics: {
         partnerships: "50+",
         reach: "1M+",
-        events: "25+"
+        events: "25+",
       },
       initiatives: [
         "Strategic partnerships with Fortune 500 companies",
         "Innovation hubs in major tech corridors",
-        "Leadership development programs"
+        "Leadership development programs",
       ],
-      keyMarkets: ["New York", "San Francisco", "Toronto", "Chicago"]
+      keyMarkets: ["New York", "San Francisco", "Toronto", "Chicago"],
     },
     {
       region: "Europe",
-      image: "https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?auto=format&fit=crop&q=80&w=1400",
+      image:
+        "https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?auto=format&fit=crop&q=80&w=1400",
       metrics: {
         partnerships: "40+",
         reach: "800K+",
-        events: "20+"
+        events: "20+",
       },
       initiatives: [
         "Digital transformation consulting",
         "Sustainable business practices",
-        "Cross-border collaboration programs"
+        "Cross-border collaboration programs",
       ],
-      keyMarkets: ["London", "Paris", "Berlin", "Amsterdam"]
+      keyMarkets: ["London", "Paris", "Berlin", "Amsterdam"],
     },
     {
       region: "Asia Pacific",
-      image: "https://images.unsplash.com/photo-1480796927426-f609979314bd?auto=format&fit=crop&q=80&w=1400",
+      image:
+        "https://images.unsplash.com/photo-1480796927426-f609979314bd?auto=format&fit=crop&q=80&w=1400",
       metrics: {
         partnerships: "35+",
         reach: "1.2M+",
-        events: "30+"
+        events: "30+",
       },
       initiatives: [
         "Market expansion strategies",
         "Technology innovation centers",
-        "Regional leadership forums"
+        "Regional leadership forums",
       ],
-      keyMarkets: ["Singapore", "Tokyo", "Sydney", "Shanghai"]
-    }
+      keyMarkets: ["Singapore", "Tokyo", "Sydney", "Shanghai"],
+    },
   ];
 
   const impactMetrics = [
     {
-      number: "20+",
+      number: "15+",
       label: "Countries",
-      description: "Active business presence"
+      description: "Active business presence",
     },
     {
-      number: "125+",
+      number: "5+",
       label: "Partnerships",
-      description: "Global strategic alliances"
+      description: "Global strategic alliances",
     },
     {
-      number: "3M+",
+      number: "1k+",
       label: "People Reached",
-      description: "Through global initiatives"
+      description: "Through global initiatives",
     },
     {
-      number: "75+",
+      number: "100+",
       label: "Global Events",
-      description: "Annual speaking engagements"
-    }
+      description: "Annual speaking engagements",
+    },
   ];
 
   const upcomingEvents = [
@@ -80,7 +82,11 @@ export default function GlobalEngagement() {
       location: "London, UK",
       type: "Keynote Speaker",
       audience: "500+ Global Leaders",
-      topics: ["Digital Transformation", "Future of Leadership", "Global Innovation"]
+      topics: [
+        "Digital Transformation",
+        "Future of Leadership",
+        "Global Innovation",
+      ],
     },
     {
       title: "Asia Pacific Business Forum",
@@ -88,7 +94,7 @@ export default function GlobalEngagement() {
       location: "Singapore",
       type: "Panel Moderator",
       audience: "300+ Business Leaders",
-      topics: ["Market Expansion", "Regional Collaboration", "Innovation"]
+      topics: ["Market Expansion", "Regional Collaboration", "Innovation"],
     },
     {
       title: "Tech Innovation Conference",
@@ -96,8 +102,8 @@ export default function GlobalEngagement() {
       location: "San Francisco, USA",
       type: "Featured Speaker",
       audience: "1000+ Industry Leaders",
-      topics: ["AI in Business", "Digital Strategy", "Future Tech"]
-    }
+      topics: ["AI in Business", "Digital Strategy", "Future Tech"],
+    },
   ];
 
   const globalInitiatives = [
@@ -107,8 +113,8 @@ export default function GlobalEngagement() {
       achievements: [
         "Implemented AI solutions in 15+ countries",
         "Reduced operational costs by 40%",
-        "Increased digital adoption by 200%"
-      ]
+        "Increased digital adoption by 200%",
+      ],
     },
     {
       title: "Sustainable Business",
@@ -116,8 +122,8 @@ export default function GlobalEngagement() {
       achievements: [
         "Launched green initiatives in 10+ regions",
         "Reduced carbon footprint by 30%",
-        "Established sustainability guidelines"
-      ]
+        "Established sustainability guidelines",
+      ],
     },
     {
       title: "Leadership Development",
@@ -125,9 +131,9 @@ export default function GlobalEngagement() {
       achievements: [
         "Mentored 500+ emerging leaders",
         "Created leadership programs in 12 countries",
-        "90% program success rate"
-      ]
-    }
+        "90% program success rate",
+      ],
+    },
   ];
 
   return (
@@ -144,8 +150,9 @@ export default function GlobalEngagement() {
           <div className="text-white max-w-2xl">
             <h1 className="text-5xl font-bold mb-6">Global Engagement</h1>
             <p className="text-xl opacity-90">
-              Driving innovation, fostering collaboration, and creating lasting impact
-              across international markets through strategic leadership and sustainable practices.
+              Driving innovation, fostering collaboration, and creating lasting
+              impact across international markets through strategic leadership
+              and sustainable practices.
             </p>
           </div>
         </div>
@@ -156,10 +163,17 @@ export default function GlobalEngagement() {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8">
             {impactMetrics.map((metric, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
-                <div className="text-4xl font-bold text-blue-600 mb-2">{metric.number}</div>
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform duration-300"
+              >
+                <div className="text-4xl font-bold text-blue-600 mb-2">
+                  {metric.number}
+                </div>
                 <div className="font-semibold mb-2">{metric.label}</div>
-                <div className="text-sm text-gray-600">{metric.description}</div>
+                <div className="text-sm text-gray-600">
+                  {metric.description}
+                </div>
               </div>
             ))}
           </div>
@@ -169,7 +183,9 @@ export default function GlobalEngagement() {
       {/* Global Presence */}
       <div className="py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-16 text-center">Global Presence</h2>
+          <h2 className="text-3xl font-bold mb-16 text-center">
+            Global Presence
+          </h2>
           <div className="space-y-20">
             {globalPresence.map((region, index) => (
               <div key={index} className="relative">
@@ -182,19 +198,31 @@ export default function GlobalEngagement() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-8 text-white">
-                      <h3 className="text-3xl font-bold mb-4">{region.region}</h3>
+                      <h3 className="text-3xl font-bold mb-4">
+                        {region.region}
+                      </h3>
                       <div className="grid grid-cols-3 gap-8">
                         <div>
-                          <div className="text-2xl font-bold">{region.metrics.partnerships}</div>
+                          <div className="text-2xl font-bold">
+                            {region.metrics.partnerships}
+                          </div>
                           <div className="text-sm opacity-80">Partnerships</div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold">{region.metrics.reach}</div>
-                          <div className="text-sm opacity-80">People Reached</div>
+                          <div className="text-2xl font-bold">
+                            {region.metrics.reach}
+                          </div>
+                          <div className="text-sm opacity-80">
+                            People Reached
+                          </div>
                         </div>
                         <div>
-                          <div className="text-2xl font-bold">{region.metrics.events}</div>
-                          <div className="text-sm opacity-80">Annual Events</div>
+                          <div className="text-2xl font-bold">
+                            {region.metrics.events}
+                          </div>
+                          <div className="text-sm opacity-80">
+                            Annual Events
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -216,7 +244,10 @@ export default function GlobalEngagement() {
                         <h4 className="font-semibold mb-4">Key Markets</h4>
                         <div className="grid grid-cols-2 gap-3">
                           {region.keyMarkets.map((market, i) => (
-                            <div key={i} className="flex items-center space-x-2 text-gray-600">
+                            <div
+                              key={i}
+                              className="flex items-center space-x-2 text-gray-600"
+                            >
                               <MapPin className="w-4 h-4 text-blue-600" />
                               <span>{market}</span>
                             </div>
@@ -235,11 +266,15 @@ export default function GlobalEngagement() {
       {/* Global Initiatives */}
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-16 text-center">Global Initiatives</h2>
+          <h2 className="text-3xl font-bold mb-16 text-center">
+            Global Initiatives
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {globalInitiatives.map((initiative, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">{initiative.title}</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  {initiative.title}
+                </h3>
                 <p className="text-gray-600 mb-6">{initiative.description}</p>
                 <div className="space-y-3">
                   {initiative.achievements.map((achievement, i) => (
@@ -258,7 +293,9 @@ export default function GlobalEngagement() {
       {/* Upcoming Global Events */}
       <div className="py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-16 text-center">Upcoming Global Events</h2>
+          <h2 className="text-3xl font-bold mb-16 text-center">
+            Upcoming Global Events
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {upcomingEvents.map((event, index) => (
               <div key={index} className="bg-gray-50 rounded-xl p-8 shadow-lg">
@@ -285,7 +322,10 @@ export default function GlobalEngagement() {
                     <div className="font-semibold mb-2">Topics:</div>
                     <div className="flex flex-wrap gap-2">
                       {event.topics.map((topic, i) => (
-                        <span key={i} className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+                        <span
+                          key={i}
+                          className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm"
+                        >
                           {topic}
                         </span>
                       ))}
@@ -303,7 +343,8 @@ export default function GlobalEngagement() {
         <div className="container mx-auto px-6 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">Ready to Go Global?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Connect with us to explore international business opportunities and strategic partnerships
+            Connect with us to explore international business opportunities and
+            strategic partnerships
           </p>
           <a
             href="/contact"

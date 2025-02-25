@@ -11,25 +11,92 @@ import {
 } from "lucide-react";
 
 export default function LeadingRole() {
-  const currentRole = {
-    position: "Chief Executive Officer",
-    company: "Anderson Global Ventures",
-    period: "2020 - Present",
-    overview:
-      "Leading a global organization with 500+ employees across 15 countries, driving innovation and sustainable growth in the technology and business consulting sectors.",
-    keyResponsibilities: [
-      "Strategic Planning & Execution",
-      "Global Team Leadership",
-      "Innovation Management",
-      "Stakeholder Relations",
-      "Digital Transformation",
-      "Market Expansion",
-    ],
-  };
+  const professionalExperience = [
+    {
+      position: "Managing Director & CEO",
+      company: "FIFOTech",
+      websiteLink: "https://fifo-tech.com/",
+      period: "2004 - Present",
+      overview:
+        "Leading a pioneering IT firm with 350+ in-house employees and 700+ remote staff, driving operational excellence, service quality, and strategic mergers to enhance industry leadership.",
+      keyResponsibilities: [
+        "Operational Improvements & Efficiency",
+        "Service Quality Enhancement",
+        "Strategic Mergers & Partnerships",
+        "Client Portfolio Expansion",
+        "Leadership & Team Development",
+      ],
+    },
+    {
+      position: "Co-Founder & Managing Director",
+      company: "Golden Fiber Asia",
+      websiteLink: "https://goldenfiberasia.com/",
+      period: "2016 - Present",
+      overview:
+        "Steering the company toward eco-friendly solutions by promoting jute-based products, expanding domestic and international market reach, and advancing infrastructure development.",
+      keyResponsibilities: [
+        "Eco-friendly Product Development",
+        "Market Expansion & Infrastructure Growth",
+        "Strategic Partnerships & Visionary Leadership",
+      ],
+    },
+    {
+      position: "Co-Founder & Managing Director",
+      company: "Shera Bangla 64",
+      websiteLink: "https://sherabangla64.com/",
+      period: "2020 - Present",
+      overview:
+        "Enhancing culinary traditions and expanding market reach for a leading Bangladeshi restaurant chain, both locally and internationally.",
+      keyResponsibilities: [
+        "Culinary Brand Expansion",
+        "Market Reach & Growth",
+        "High-Quality Experience Design",
+      ],
+    },
+    {
+      position: "Editor",
+      company: "Dainik Eidin",
+      websiteLink: "https://www.dainikeidin.com/",
+      period: "2019 - Present",
+      overview:
+        "Driving the company’s vision towards becoming a trusted news platform by leading infrastructure development and enhancing content quality.",
+      keyResponsibilities: [
+        "Content Strategy & Development",
+        "Stakeholder Relationship Management",
+        "Brand Positioning & Growth",
+      ],
+    },
+    {
+      position: "Owner",
+      company: "FIFOTech Marketing and Social Media Services",
+      websiteLink: "https://fifo-tech.com/",
+      period: "2020 - Present",
+      overview:
+        "Providing innovative and reliable social media marketing services, growing the company’s global reach, and delivering tailored digital marketing solutions.",
+      keyResponsibilities: [
+        "Digital Marketing Strategy",
+        "Social Media Marketing Expertise",
+        "Global Client Reach & Service Expansion",
+      ],
+    },
+    {
+      position: "Former Secretary General",
+      company: "Bangladesh Association of Contact Center & Outsourcing (BACCO)",
+      websiteLink: "https://www.bacco.org.bd/ec_committee/present_ec_committe",
+      period: "2010 - 2024",
+      overview:
+        "Led initiatives in IT regulations, governance of BTRC, and growth of the contact center/BPO industry, training over 20,000 students under national skills programs.",
+      keyResponsibilities: [
+        "IT Regulation Development & Governance",
+        "Industry Growth & Advocacy",
+        "Educational Program Leadership",
+      ],
+    },
+  ];
 
   const impactMetrics = [
     {
-      number: "500+",
+      number: "1000+",
       label: "Team Members",
       description: "Leading a diverse, global workforce",
     },
@@ -79,30 +146,63 @@ export default function LeadingRole() {
 
   const initiatives = [
     {
-      title: "Digital Transformation",
-      description: "Led company-wide digital transformation initiative",
+      title: "Operational Excellence",
+      description:
+        "Led initiatives to streamline operations and improve efficiency",
       metrics: [
-        "Implemented AI-driven analytics platform",
-        "Reduced operational costs by 40%",
-        "Increased digital service adoption by 200%",
+        "Enhanced service quality by implementing targeted operational changes",
+        "Improved company performance and set new industry standards",
+        "Facilitated the merger of FIFOTech with two leading IT firms",
       ],
     },
     {
-      title: "Market Expansion",
-      description: "Spearheaded international market entry strategy",
+      title: "Sustainability & Green Innovation",
+      description:
+        "Pioneered the use of jute-based products to reduce plastic pollution",
       metrics: [
-        "Established presence in 5 new markets",
-        "Achieved 150% revenue growth in new regions",
-        "Built strategic partnerships with 20+ local entities",
+        "Developed 300+ eco-friendly jute products for domestic and international markets",
+        "Increased Golden Fiber Asia’s market reach by expanding globally",
+        "Strengthened industry relationships to promote sustainable solutions",
       ],
     },
     {
-      title: "Team Excellence",
-      description: "Developed high-performance organizational culture",
+      title: "Strategic Market Expansion",
+      description:
+        "Drove market expansion for Shera Bangla 64 locally and internationally",
       metrics: [
-        "Reduced employee turnover by 45%",
-        "Implemented leadership development program",
-        "Achieved 90% employee satisfaction rate",
+        "Expanded the brand to new regions both inside and outside Bangladesh",
+        "Increased recognition for providing high-quality culinary experiences",
+        "Enhanced infrastructure to support growth and improve service quality",
+      ],
+    },
+    {
+      title: "Digital Transformation & Social Media Marketing",
+      description:
+        "Established and expanded FIFOTech Marketing and Social Media Services",
+      metrics: [
+        "Created tailored social media strategies for a diverse range of clients",
+        "Expanded services globally by entering new international markets",
+        "Built a reputation for excellence in digital marketing services worldwide",
+      ],
+    },
+    {
+      title: "Industry Advocacy & Skill Development",
+      description:
+        "Led initiatives to advance industry standards and skill-building efforts",
+      metrics: [
+        "Trained over 20,000 students through BACCO’s SEIP program",
+        "Contributed to the development of IT regulations and industry governance",
+        "Supported the growth of the contact center and BPO sectors in Bangladesh",
+      ],
+    },
+    {
+      title: "Leadership & Organizational Development",
+      description:
+        "Fostered a culture of leadership and performance across multiple organizations",
+      metrics: [
+        "Developed leadership programs that improved team performance",
+        "Built and maintained high-performing teams across all key initiatives",
+        "Empowered employees and promoted team collaboration at all levels",
       ],
     },
   ];
@@ -155,17 +255,18 @@ export default function LeadingRole() {
   const testimonials = [
     {
       quote:
-        "John's visionary leadership has transformed our organization, setting new standards for innovation and growth.",
-      author: "Sarah Chen",
-      position: "Board Member",
-      company: "Anderson Global Ventures",
+        "Mr. Towhid Hossain’s visionary leadership has transformed our organization, setting new standards for innovation and growth.",
+      author: "Wahidur Sharif",
+      position: "Managing Partner",
+      company: "Impetus Global LLC",
     },
+
     {
       quote:
         "His ability to inspire teams and drive results while maintaining a strong focus on innovation is remarkable.",
-      author: "David Martinez",
-      position: "Senior VP",
-      company: "Global Tech Partners",
+      author: "Mizanur Rahman",
+      position: "Founder & CEO",
+      company: "Marcy construction",
     },
   ];
 
@@ -187,37 +288,52 @@ export default function LeadingRole() {
 
       {/* Current Role Overview */}
       <div className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg">
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-12">
-              <div className="md:w-2/3">
-                <h2 className="text-3xl font-bold mb-4">
-                  {currentRole.position}
-                </h2>
-                <div className="text-blue-600 text-lg mb-6">
-                  {currentRole.company} | {currentRole.period}
+        <div className="container space-y-12 mx-auto px-6">
+          {professionalExperience?.map((currentRole, i) => (
+            <div
+              key={i}
+              className="bg-gray-50 group rounded-2xl p-8 md:p-12 shadow-lg"
+            >
+              <div className="flex flex-col md:flex-row md:group-even:flex-row-reverse md:gap-12 md:items-start">
+                <div className="md:w-2/3">
+                  <h2 className="text-3xl font-bold mb-4">
+                    {currentRole.position}
+                  </h2>
+                  <div className="text-blue-600 text-lg mb-6">
+                    <a
+                      className="hover:underline cursor-pointer"
+                      href={currentRole?.websiteLink}
+                      target="_blank"
+                    >
+                      {currentRole?.company}
+                    </a>{" "}
+                    | <span>{currentRole?.period}</span>
+                  </div>
+                  <p className="text-gray-700 mb-8">{currentRole.overview}</p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {currentRole.keyResponsibilities.map(
+                      (responsibility, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-2"
+                        >
+                          <CheckCircle className="w-5 h-5 text-blue-600" />
+                          <span>{responsibility}</span>
+                        </div>
+                      )
+                    )}
+                  </div>
                 </div>
-                <p className="text-gray-700 mb-8">{currentRole.overview}</p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {currentRole.keyResponsibilities.map(
-                    (responsibility, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="w-5 h-5 text-blue-600" />
-                        <span>{responsibility}</span>
-                      </div>
-                    )
-                  )}
+                <div className="hidden md:block md:w-1/3">
+                  <img
+                    src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800"
+                    alt="Office"
+                    className="rounded-lg shadow-lg"
+                  />
                 </div>
-              </div>
-              <div className="hidden md:block md:w-1/3">
-                <img
-                  src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=800"
-                  alt="Office"
-                  className="rounded-lg shadow-lg"
-                />
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
 

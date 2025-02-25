@@ -223,25 +223,25 @@ export default function Awards() {
 
   const speakingEngagements = [
     {
-      event: "Global Leadership Summit",
-      location: "New York",
-      date: "December 2023",
-      topic: "Future of Business Leadership",
-      audience: "500+ C-level executives",
+      event: "Digital Innovation Challenge for Women 2023",
+      location: "Bangladesh",
+      date: "2023",
+      topic: "Empowering female innovators in technology",
+      audience: "Judging digital innovation projects",
     },
     {
-      event: "Tech Innovation Conference",
-      location: "London",
-      date: "October 2023",
-      topic: "Digital Transformation Strategy",
-      audience: "1000+ industry leaders",
+      event: '“Amar Cokhe Ajker Bangladesh" Video Competition',
+      location: "Deepto TV Studio, Bangladesh",
+      date: "2023",
+      topic: "Showcasing Bangladesh’s development & progress",
+      audience: "Evaluating 1,100+ submissions as a judge",
     },
     {
-      event: "Business Excellence Forum",
-      location: "Singapore",
-      date: "September 2023",
-      topic: "Building Sustainable Organizations",
-      audience: "300+ business leaders",
+      event: "UAP CSE Software & Hardware Carnival 2020",
+      location: "University of Asia Pacific, Bangladesh",
+      date: "2020",
+      topic: "Assessing software & hardware innovations",
+      audience: "Providing feasibility & impact feedback",
     },
   ];
 
