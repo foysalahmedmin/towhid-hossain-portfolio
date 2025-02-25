@@ -3,7 +3,7 @@ import {
   CheckCircle,
   Globe,
   Lightbulb,
-  Star,
+  ShieldCheck,
   Target,
   Trophy,
   Users,
@@ -109,7 +109,7 @@ export default function LeadingRole() {
 
   const achievements = [
     {
-      icon: <Award className="w-12 h-12 text-purple-500" />,
+      icon: <Trophy className="w-12 h-12 text-purple-500" />,
       title: "Award for Outstanding Tech Company",
       organization: "ASOCIO Summit Awards",
       year: "2022",
@@ -120,9 +120,10 @@ export default function LeadingRole() {
         "Recognized for contributions to technology innovation",
         "Celebrated for leadership in the global tech industry",
       ],
+      link: "https://www.prothomalo.com/technology/yxzzvo3okh",
     },
     {
-      icon: <Trophy className="w-12 h-12 text-yellow-500" />,
+      icon: <Award className="w-12 h-12 text-yellow-500" />,
       title: "Award for the Best IT Company",
       organization: "National Award of Digital Bangladesh",
       year: "2020",
@@ -136,7 +137,7 @@ export default function LeadingRole() {
       link: "https://www.bbarta24.net/science-and-technology/135718",
     },
     {
-      icon: <Star className="w-12 h-12 text-blue-600" />,
+      icon: <ShieldCheck className="w-12 h-12 text-blue-600" />,
       title: "Award of Post & Telecom",
       organization: "National Awards for Posts and Telecoms",
       year: "2023",
@@ -297,36 +298,19 @@ export default function LeadingRole() {
             Recognition & Awards
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {achievements.map((award, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl shadow-lg">
-                <div className="flex justify-center mb-6">{award.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 text-center">
-                  {award?.title}
+            {achievements.map((achievement, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 p-8 rounded-xl shadow-lg text-center"
+              >
+                <div className="flex justify-center mb-6">
+                  {achievement.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">
+                  {achievement.title}
                 </h3>
-                <div className="text-blue-600 mb-2 text-center">
-                  {award?.organization}
-                </div>
-                <div className="text-gray-600 mb-4 text-center">
-                  {award?.year}
-                </div>
-                <p className="text-gray-700 mb-4">{award.description}</p>
-                <div className="space-y-2">
-                  {award.impact.map((item, i) => (
-                    <div key={i} className="flex items-start space-x-2">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-[2px] flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-6">
-                  <a
-                    className="text-blue-600 cursor-pointer hover:underline"
-                    target="_blank"
-                    href={award?.link}
-                  >
-                    Read More
-                  </a>
-                </div>
+                <p className="text-blue-600 mb-1">{achievement.organization}</p>
+                <p className="text-gray-600">{achievement.year}</p>
               </div>
             ))}
           </div>
