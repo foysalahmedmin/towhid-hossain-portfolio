@@ -16,7 +16,7 @@ export default function LeadingRole() {
       position: "Managing Director & CEO",
       company: "FIFOTech",
       websiteLink: "https://fifo-tech.com/",
-      image: "/fifo-tech-logo.jpeg",
+      image: "/fifo-tech-logo.jpg",
       period: "2004 - Present",
       overview:
         "Leading a pioneering IT firm with 350+ in-house employees and 700+ remote staff, driving operational excellence, service quality, and strategic mergers to enhance industry leadership.",
@@ -46,7 +46,7 @@ export default function LeadingRole() {
       position: "Co-Founder & Managing Director",
       company: "Shera Bangla 64",
       websiteLink: "https://sherabangla64.com/",
-      image: "/shera-bangla64-logo.png",
+      image: "/shera-bangla64-logo.jpg",
       period: "2020 - Present",
       overview:
         "Enhancing culinary traditions and expanding market reach for a leading Bangladeshi restaurant chain, both locally and internationally.",
@@ -60,7 +60,7 @@ export default function LeadingRole() {
       position: "Editor",
       company: "Dainik Eidin",
       websiteLink: "https://www.dainikeidin.com/",
-      image: "",
+      image: "/ei-din-logo.jpg",
       period: "2019 - Present",
       overview:
         "Driving the company’s vision towards becoming a trusted news platform by leading infrastructure development and enhancing content quality.",
@@ -74,7 +74,7 @@ export default function LeadingRole() {
       position: "Owner",
       company: "FIFOTech Marketing and Social Media Services",
       websiteLink: "https://fifo-tech.com/",
-      image: "",
+      image: "/fifo-tech-marketing-logo.jpg",
       period: "2020 - Present",
       overview:
         "Providing innovative and reliable social media marketing services, growing the company’s global reach, and delivering tailored digital marketing solutions.",
@@ -88,7 +88,7 @@ export default function LeadingRole() {
       position: "Former Secretary General",
       company: "Bangladesh Association of Contact Center & Outsourcing (BACCO)",
       websiteLink: "https://www.bacco.org.bd/ec_committee/present_ec_committe",
-      image: "",
+      image: "/bacco-logo.jpg",
       period: "2010 - 2024",
       overview:
         "Led initiatives in IT regulations, governance of BTRC, and growth of the contact center/BPO industry, training over 20,000 students under national skills programs.",
