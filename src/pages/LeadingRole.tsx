@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   Award,
   CheckCircle,
   Globe,
@@ -9,8 +10,10 @@ import {
   Users,
   Zap,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function LeadingRole() {
+  const [isShow, setIsShow] = useState(false);
   const professionalExperience = [
     {
       position: "Managing Director & CEO",
@@ -400,23 +403,40 @@ export default function LeadingRole() {
             Key Initiatives
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {initiatives.map((initiative, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">
-                  {initiative.title}
-                </h3>
-                <p className="text-gray-600 mb-6">{initiative.description}</p>
-                <ul className="space-y-3">
-                  {initiative.metrics.map((metric, i) => (
-                    <li key={i} className="flex items-start space-x-2">
-                      <Zap className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                      <span className="text-gray-700">{metric}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {initiatives
+              .slice(0, isShow ? initiatives?.length : 3)
+              .map((initiative, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-xl font-semibold mb-4">
+                    {initiative.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6">{initiative.description}</p>
+                  <ul className="space-y-3">
+                    {initiative.metrics.map((metric, i) => (
+                      <li key={i} className="flex items-start space-x-2">
+                        <Zap className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                        <span className="text-gray-700">{metric}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
           </div>
+          {!isShow && (
+            <div className="text-center mt-6">
+              <button
+                onClick={() => setIsShow(true)}
+                className="inline-flex gap-2 hover:gap-4 transition-all duration-300 items-center bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90"
+              >
+                {isShow ? (
+                  <span>Show Less</span>
+                ) : (
+                  <span>More Initiatives</span>
+                )}
+                <ArrowRight className="size-5" />
+              </button>
+            </div>
+          )}
         </div>
       </div>
 

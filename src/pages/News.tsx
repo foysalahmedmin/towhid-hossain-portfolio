@@ -3,21 +3,28 @@ import { useState } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import news from "../assets/data/news";
+import pressReleases from "../assets/data/pressReleases";
 
 import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
-import { pressReleases } from "../assets/data/pressReleases";
 
-export default function News() {
-  const [newsTab, setNewsTab] = useState("All");
-
-  const sortedNews = news.sort((a, b) => {
+const sortByDate = (data = []) => {
+  return data?.sort((a, b) => {
     const dateA = new Date(a?.date || "");
     const dateB = new Date(b?.date || "");
 
     return dateB - dateA;
   });
+};
+
+export default function News() {
+  const [newsTab, setNewsTab] = useState("All");
+  const [isShow, setIsShow] = useState(false);
+  const [isShowPress, setIsShowPress] = useState(false);
+
+  const sortedNews = sortByDate(news);
+  const sortedPressReleases = sortByDate(pressReleases);
 
   const featuredNews = sortedNews?.filter((news) => !!news?.isFeatured);
 
@@ -26,7 +33,7 @@ export default function News() {
       ? sortedNews
       : sortedNews?.filter(
           (news) =>
-            news.category.toLocaleLowerCase() === newsTab.toLocaleLowerCase()
+            news?.category.toLocaleLowerCase() === newsTab?.toLocaleLowerCase()
         );
 
   const upcomingEvents = [
@@ -51,6 +58,7 @@ export default function News() {
   ];
 
   const categories = [
+    { name: "All", count: 22 },
     { name: "Business Process Outsourcing", count: 5 },
     { name: "Entrepreneurship & Startups", count: 4 },
     { name: "International Collaboration", count: 1 },
@@ -139,59 +147,73 @@ export default function News() {
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold mb-8">Latest Articles</h2>
             <div className="space-y-8">
-              {filteredNews.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02]"
-                >
-                  <div className="md:flex">
-                    <div className="md:w-1/3">
-                      <img
-                        src={item.image || "/news-demo.jpeg"}
-                        alt={item.title}
-                        className="h-48 w-full object-cover md:h-full"
-                      />
-                    </div>
-                    <div className="p-6 md:w-2/3">
-                      <div className="flex items-center space-x-4 mb-4">
-                        <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
-                          {item.tags?.[0]}
-                        </span>
-                        <span className="text-gray-500 text-sm flex items-center">
-                          <Calendar className="w-4 h-4 mr-1" />
-                          {item.date}
-                        </span>
+              {filteredNews
+                .slice(0, isShow ? filteredNews?.length : 7)
+                .map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02]"
+                  >
+                    <div className="md:flex">
+                      <div className="md:w-1/3">
+                        <img
+                          src={item.image || "/news-demo.jpeg"}
+                          alt={item.title}
+                          className="h-48 w-full object-cover md:h-full"
+                        />
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4">{item.excerpt}</p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          {item?.author && (
-                            <span className="text-gray-500 text-sm flex items-center">
-                              <User className="w-4 h-4 mr-1" />
-                              {item?.author}
-                            </span>
-                          )}
-                          {item?.readTime && (
-                            <span className="text-gray-500 text-sm">
-                              {item?.readTime}
-                            </span>
-                          )}
+                      <div className="p-6 md:w-2/3">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+                            {item.tags?.[0]}
+                          </span>
+                          <span className="text-gray-500 text-sm flex items-center">
+                            <Calendar className="w-4 h-4 mr-1" />
+                            {item.date}
+                          </span>
                         </div>
-                        <a
-                          href={item?.link}
-                          target="_blank"
-                          className="text-blue-600 hover:text-blue-700 flex items-center"
-                        >
-                          Read More <ArrowRight className="w-4 h-4 ml-1" />
-                        </a>
+                        <h3 className="text-xl font-semibold mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 mb-4">{item.excerpt}</p>
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-4">
+                            {item?.author && (
+                              <span className="text-gray-500 text-sm flex items-center">
+                                <User className="w-4 h-4 mr-1" />
+                                {item?.author}
+                              </span>
+                            )}
+                            {item?.readTime && (
+                              <span className="text-gray-500 text-sm">
+                                {item?.readTime}
+                              </span>
+                            )}
+                          </div>
+                          <a
+                            href={item?.link}
+                            target="_blank"
+                            className="text-blue-600 hover:text-blue-700 flex items-center"
+                          >
+                            Read More <ArrowRight className="w-4 h-4 ml-1" />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
+                ))}
+              {!isShow && filteredNews?.length > 7 && (
+                <div className=" mt-6">
+                  <button
+                    onClick={() => setIsShow(true)}
+                    // className="flex w-full hover:underline items-center text-blue-600 gap-4"
+                    className="inline-flex gap-2 hover:gap-4 transition-all duration-300 items-center bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90"
+                  >
+                    {isShow ? <span>Show Less</span> : <span>More News</span>}
+                    <ArrowRight className="size-5" />
+                  </button>
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
@@ -229,23 +251,42 @@ export default function News() {
                 Press Releases
               </h3>
               <div className="">
-                {pressReleases.map((release, index) => (
-                  <Link
-                    to={release?.link || "/press-releases" + "/" + release?.id}
-                    target="_blank"
-                    key={index}
-                    className="border-b block border-gray-100 py-4 px-6 cursor-pointer hover:bg-gray-50 last:border-0 last:pb-0"
-                  >
-                    <div className="text-sm text-gray-500 mb-1">
-                      {new Date(release?.date || "")?.toLocaleDateString(
-                        "en-US",
-                        { year: "numeric", month: "long", day: "numeric" }
+                {sortedPressReleases
+                  .slice(0, isShowPress ? sortedPressReleases?.length : 6)
+                  .map((release, index) => (
+                    <Link
+                      to={
+                        release?.link || "/press-releases" + "/" + release?.id
+                      }
+                      target="_blank"
+                      key={index}
+                      className="border-b block border-gray-100 py-4 px-6 cursor-pointer hover:bg-gray-50 last:border-0 last:pb-0"
+                    >
+                      <div className="text-sm text-gray-500 mb-1">
+                        {new Date(release?.date || "")?.toLocaleDateString(
+                          "en-US",
+                          { year: "numeric", month: "long", day: "numeric" }
+                        )}
+                      </div>
+                      <h4 className="font-semibold mb-2">{release.title}</h4>
+                      <p className="text-gray-600 text-sm">{release.excerpt}</p>
+                    </Link>
+                  ))}
+                {!isShowPress && (
+                  <div className="px-6 mt-6">
+                    <button
+                      onClick={() => setIsShowPress(true)}
+                      className="flex w-full hover:underline items-center text-blue-600 gap-4"
+                    >
+                      {isShowPress ? (
+                        <span>Show Less</span>
+                      ) : (
+                        <span>More Press Releases</span>
                       )}
-                    </div>
-                    <h4 className="font-semibold mb-2">{release.title}</h4>
-                    <p className="text-gray-600 text-sm">{release.excerpt}</p>
-                  </Link>
-                ))}
+                      <ArrowRight className="size-5" />
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
 

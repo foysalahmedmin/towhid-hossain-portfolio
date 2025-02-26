@@ -1,4 +1,4 @@
-export const pressReleases = [
+const pressReleases = [
   {
     id: 1,
     date: "2022-10-25",
@@ -206,3 +206,5 @@ export const pressReleases = [
     images: ["/press-releases/19.jpg", "/press-releases/19.1.jpg"],
   },
 ];
+
+export default pressReleases;

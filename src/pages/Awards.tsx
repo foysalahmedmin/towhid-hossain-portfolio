@@ -305,7 +305,7 @@ export default function Awards() {
         <h2 className="text-3xl font-bold mb-12 text-center">Major Awards</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {majorAwards
-            .slice(0, isShow ? majorAwards?.length : 3)
+            .slice(0, isShow ? majorAwards?.length : 6)
             .map((award, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-xl shadow-lg">
                 <div className="flex justify-center mb-6">{award.icon}</div>
@@ -354,7 +354,7 @@ export default function Awards() {
       </div>
 
       {/* Industry Recognitions Timeline */}
-      <div className="bg-gray-50 py-20 mb-20">
+      {/* <div className="bg-gray-50 py-20 mb-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">
             Industry Recognition Timeline
@@ -382,7 +382,7 @@ export default function Awards() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Speaking Engagements */}
       <div className="container mx-auto px-6 mb-20">
