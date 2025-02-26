@@ -15,6 +15,7 @@ import {
   Twitter,
   Users,
 } from "lucide-react";
+import news from "../assets/data/news";
 
 export default function Home() {
   const expertise = [
@@ -91,25 +92,12 @@ export default function Home() {
     },
   ];
 
-  const latestNews = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800",
-      title: "Keynote Speaker at Global Business Summit 2024",
-      date: "March 15, 2024",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
-      title: "New Strategic Partnership Announcement",
-      date: "March 10, 2024",
-    },
-  ];
+  const latestNews = news?.filter((news) => !!news?.isFeatured).slice(1, 3);
 
   return (
     <div>
       {/* Hero Section */}
-      <header className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-20 mb-20">
+      <header className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-20">
         <div className="container mx-auto px-6 text-white">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold mb-4">Towhid Hossain</h1>
@@ -193,7 +181,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -257,20 +245,23 @@ export default function Home() {
             </a>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {latestNews.map((news, index) => (
+            {latestNews?.map((news, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl overflow-hidden shadow-lg"
               >
                 <img
-                  src={news.image}
-                  alt={news.title}
-                  className="w-full h-48 object-cover"
+                  src={news?.image}
+                  alt={news?.title}
+                  className="w-full h-60 object-cover"
                 />
                 <div className="p-6">
-                  <p className="text-sm text-gray-500 mb-2">{news.date}</p>
-                  <h3 className="text-xl font-semibold mb-4">{news.title}</h3>
-                  <a href="/news" className="text-blue-600 hover:text-blue-700">
+                  <p className="text-sm text-gray-500 mb-2">{news?.date}</p>
+                  <h3 className="text-xl font-semibold mb-4">{news?.title}</h3>
+                  <a
+                    href={news?.link}
+                    className="text-blue-600 hover:text-blue-700"
+                  >
                     Read More
                   </a>
                 </div>

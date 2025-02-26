@@ -7,6 +7,7 @@ import GlobalEngagement from "./pages/GlobalEngagement";
 import Home from "./pages/Home";
 import LeadingRole from "./pages/LeadingRole";
 import News from "./pages/News";
+import PressDetails from "./pages/PressDetails";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/news" element={<News />} />
           <Route path="/global-engagement" element={<GlobalEngagement />} />
           <Route path="/contact" element={<Contact />} />
+
+          <Route path="/press-releases/:id" element={<PressDetails />} />
         </Routes>
       </div>
     </Router>
