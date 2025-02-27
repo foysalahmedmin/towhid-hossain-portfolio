@@ -71,13 +71,21 @@ export default function News() {
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-24">
-        <div className="container mx-auto px-6 text-white">
-          <h1 className="text-4xl font-bold mb-6">Latest News & Updates</h1>
-          <p className="text-xl opacity-90 max-w-2xl">
-            Stay informed about the latest developments, insights, and
-            achievements in business leadership and digital transformation.
-          </p>
+      <div className="relative min-h-[60vh] flex items-center overflow-hidden">
+        <img
+          src="/news-banner.png"
+          alt="Global Engagement"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/50"></div>
+        <div className="relative h-full container mx-auto px-6 flex items-center">
+          <div className="text-white max-w-2xl">
+            <h1 className="text-4xl font-bold mb-6">Latest News & Updates</h1>
+            <p className="text-xl opacity-90 max-w-2xl">
+              Stay informed about the latest developments, insights, and
+              achievements in business leadership and digital transformation.
+            </p>
+          </div>
         </div>
       </div>
 

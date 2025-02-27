@@ -48,7 +48,7 @@ export default function Home() {
   const stats = [
     { number: "20+", label: "Years Experience" },
     { number: "1k+", label: "Team Members" },
-    { number: "50M+", label: "Revenue Generated" },
+    { number: "10M+", label: "Revenue Generated" },
     { number: "15+", label: "Countries" },
   ];
 
@@ -137,15 +137,17 @@ export default function Home() {
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-3 gap-12 md:gap-20 items-center">
             <div>
-              <img
-                src="/profile.jpeg"
-                alt="Towhid Hossain"
-                className="rounded-lg shadow-xl"
-              />
+              <div className="aspect-square rounded-full overflow-hidden border-4 border-blue-600">
+                <img
+                  src="/profile.png"
+                  alt="Towhid Hossain"
+                  className="rounded-lg size-full object-cover object-center shadow-xl"
+                />
+              </div>
             </div>
-            <div>
+            <div className="md:col-span-2">
               <h2 className="text-3xl font-bold mb-6">About Me</h2>
               <p className="text-gray-600 mb-6">
                 I have dedicated more than two decades to the Business Process

@@ -92,11 +92,11 @@ export default function GlobalEngagement() {
       {/* Hero Section */}
       <div className="relative min-h-[60vh] flex items-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
-          alt="Global Engagement"
+          src="/global-engagement-banner.jpg"
+          alt="News"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/50"></div>
         <div className="relative h-full container mx-auto px-6 flex items-center">
           <div className="text-white max-w-2xl">
             <h1 className="text-5xl font-bold mb-6">Global Engagement</h1>

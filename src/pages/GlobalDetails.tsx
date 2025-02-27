@@ -32,7 +32,7 @@ export default function GlobalDetails() {
             region?.image ||
             "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000"
           }
-          alt="Global Engagement"
+          alt="Global Details"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/80"></div>

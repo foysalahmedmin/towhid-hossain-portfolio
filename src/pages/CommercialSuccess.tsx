@@ -149,19 +149,27 @@ export default function CommercialSuccess() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-20 mb-20">
-        <div className="container mx-auto px-6 text-white">
-          <h1 className="text-4xl font-bold mb-6">Commercial Success</h1>
-          <p className="text-xl opacity-90 max-w-2xl">
-            Achieving sustainable growth through strategic innovation,
-            operational excellence, and visionary leadership across national and
-            global markets.
-          </p>
+      <div className="relative min-h-[60vh] flex items-center overflow-hidden">
+        <img
+          src="/commercial-growth-banner.png"
+          alt="News"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/50"></div>
+        <div className="relative h-full container mx-auto px-6 flex items-center">
+          <div className="text-white max-w-2xl">
+            <h1 className="text-4xl font-bold mb-6">Commercial Success</h1>
+            <p className="text-xl opacity-90 max-w-2xl">
+              Achieving sustainable growth through strategic innovation,
+              operational excellence, and visionary leadership across national
+              and global markets.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Key Metrics */}
-      <div className="container mx-auto px-6 mb-20">
+      <div className="container mx-auto px-6 py-20">
         <div className="grid md:grid-cols-4 gap-8">
           {keyMetrics.map((metric, index) => (
             <div key={index} className="bg-gray-50 p-6 rounded-xl text-center">

@@ -282,9 +282,15 @@ export default function LeadingRole() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-24">
-        <div className="container mx-auto px-6 text-white">
-          <div className="max-w-3xl">
+      <div className="relative min-h-[60vh] flex items-center overflow-hidden">
+        <img
+          src="/leading-role-banner.png"
+          alt="Leading Role"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/80"></div>
+        <div className="relative h-full container mx-auto px-6 flex items-center">
+          <div className="text-white max-w-3xl">
             <h1 className="text-4xl font-bold mb-6">Leadership & Impact</h1>
             <p className="text-xl opacity-90">
               Driving organizational excellence through strategic vision,
