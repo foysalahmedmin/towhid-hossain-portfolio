@@ -105,12 +105,12 @@ export default function LeadingRole() {
 
   const impactMetrics = [
     {
-      number: "1000+",
+      number: "1k+",
       label: "Team Members",
       description: "Leading a diverse, global workforce",
     },
     {
-      number: "15",
+      number: "15+",
       label: "Countries",
       description: "Direct operational presence",
     },
@@ -120,7 +120,7 @@ export default function LeadingRole() {
       description: "Revenue growth under leadership",
     },
     {
-      number: "40+",
+      number: "50+",
       label: "Partners",
       description: "Strategic partnerships established",
     },

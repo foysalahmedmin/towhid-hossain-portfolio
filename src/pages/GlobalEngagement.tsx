@@ -1,57 +1,8 @@
 import { ArrowRight, Calendar, CheckCircle, MapPin, Users } from "lucide-react";
+import { Link } from "react-router-dom";
+import globalPresence from "../assets/data/globalPresence";
 
 export default function GlobalEngagement() {
-  const globalPresence = [
-    {
-      region: "North America",
-      image:
-        "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&q=80&w=1400",
-      metrics: {
-        partnerships: "50+",
-        reach: "1M+",
-        events: "25+",
-      },
-      initiatives: [
-        "Strategic partnerships with Fortune 500 companies",
-        "Innovation hubs in major tech corridors",
-        "Leadership development programs",
-      ],
-      keyMarkets: ["New York", "San Francisco", "Toronto", "Chicago"],
-    },
-    {
-      region: "Europe",
-      image:
-        "https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?auto=format&fit=crop&q=80&w=1400",
-      metrics: {
-        partnerships: "40+",
-        reach: "800K+",
-        events: "20+",
-      },
-      initiatives: [
-        "Digital transformation consulting",
-        "Sustainable business practices",
-        "Cross-border collaboration programs",
-      ],
-      keyMarkets: ["London", "Paris", "Berlin", "Amsterdam"],
-    },
-    {
-      region: "Asia Pacific",
-      image:
-        "https://images.unsplash.com/photo-1480796927426-f609979314bd?auto=format&fit=crop&q=80&w=1400",
-      metrics: {
-        partnerships: "35+",
-        reach: "1.2M+",
-        events: "30+",
-      },
-      initiatives: [
-        "Market expansion strategies",
-        "Technology innovation centers",
-        "Regional leadership forums",
-      ],
-      keyMarkets: ["Singapore", "Tokyo", "Sydney", "Shanghai"],
-    },
-  ];
-
   const impactMetrics = [
     {
       number: "15+",
@@ -59,7 +10,7 @@ export default function GlobalEngagement() {
       description: "Active business presence",
     },
     {
-      number: "5+",
+      number: "20+",
       label: "Partnerships",
       description: "Global strategic alliances",
     },
@@ -69,7 +20,7 @@ export default function GlobalEngagement() {
       description: "Through global initiatives",
     },
     {
-      number: "100+",
+      number: "50+",
       label: "Global Events",
       description: "Annual speaking engagements",
     },
@@ -108,30 +59,30 @@ export default function GlobalEngagement() {
 
   const globalInitiatives = [
     {
-      title: "Digital Transformation",
+      title: "BPO Excellence & Job Creation",
       description: "Leading digital innovation across global markets",
       achievements: [
-        "Implemented AI solutions in 15+ countries",
-        "Reduced operational costs by 40%",
-        "Increased digital adoption by 200%",
+        "Expanding BPO services across global markets",
+        "Creating thousands of jobs in multiple sectors",
+        "Providing training to build skilled workforces",
       ],
     },
     {
-      title: "Sustainable Business",
+      title: "Sustainable Business Practices",
       description: "Promoting sustainable practices worldwide",
       achievements: [
-        "Launched green initiatives in 10+ regions",
-        "Reduced carbon footprint by 30%",
-        "Established sustainability guidelines",
+        "Replacing plastic with eco-friendly jute goods",
+        "Launching green projects in 10+ global regions",
+        "Cutting carbon emissions by 30% worldwide",
       ],
     },
     {
-      title: "Leadership Development",
+      title: "Empowering Communities",
       description: "Building next-generation global leaders",
       achievements: [
-        "Mentored 500+ emerging leaders",
-        "Created leadership programs in 12 countries",
-        "90% program success rate",
+        "Training 500+ women and minority workers",
+        "Building leaders through global mentorships",
+        "Achieving 90% success in growth programs",
       ],
     },
   ];
@@ -187,8 +138,13 @@ export default function GlobalEngagement() {
             Global Presence
           </h2>
           <div className="space-y-20">
-            {globalPresence.map((region, index) => (
-              <div key={index} className="relative">
+            {globalPresence?.map((region, index) => (
+              <Link
+                key={index}
+                to={"/global-presence" + "/" + region?.id}
+                target="_blank"
+                className="relative block hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <div className="relative h-[300px]">
                     <img
@@ -257,7 +213,7 @@ export default function GlobalEngagement() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -267,7 +223,7 @@ export default function GlobalEngagement() {
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold mb-16 text-center">
-            Global Initiatives
+            Global Impact & Sustainable Growth
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {globalInitiatives.map((initiative, index) => (

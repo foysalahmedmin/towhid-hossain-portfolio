@@ -19,12 +19,12 @@ export default function PressDetails() {
           <p className="text-xl opacity-90 max-w-2xl">{press?.excerpt}</p>
         </div>
       </div>
-      <div className="container mx-auto px-6 py-20 space-y-16">
+      <div className="container mx-auto px-6 py-20 space-y-6">
         <div>
           <h1 className="text-4xl font-bold mb-6">Description</h1>
           <p className="opacity-90 text-xl">{press?.description}</p>
         </div>
-        <div>
+        <div className="space-y-6">
           {press?.images?.map((image, index) => (
             <div key={index}>
               <img className="max-w-full" src={image} alt={press?.title} />

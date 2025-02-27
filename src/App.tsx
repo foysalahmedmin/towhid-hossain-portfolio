@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Awards from "./pages/Awards";
 import CommercialSuccess from "./pages/CommercialSuccess";
 import Contact from "./pages/Contact";
+import GlobalDetails from "./pages/GlobalDetails";
 import GlobalEngagement from "./pages/GlobalEngagement";
 import Home from "./pages/Home";
 import LeadingRole from "./pages/LeadingRole";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/press-releases/:id" element={<PressDetails />} />
+          <Route path="/global-presence/:id" element={<GlobalDetails />} />
         </Routes>
       </div>
     </Router>
