@@ -24,8 +24,8 @@ export default function News() {
   const [isShowPress, setIsShowPress] = useState(false);
 
   const sortedNews = sortByDate(news);
-  // const sortedPressReleases = sortByDate(pressReleases);
-  const sortedPressReleases = pressReleases;
+  const sortedPressReleases = sortByDate(pressReleases);
+  // const sortedPressReleases = pressReleases;
 
   const featuredNews = sortedNews?.filter((news) => !!news?.isFeatured);
 

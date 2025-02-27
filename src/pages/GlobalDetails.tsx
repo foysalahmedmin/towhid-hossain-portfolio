@@ -3,12 +3,19 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import globalPresence from "../assets/data/globalPresence";
 
+const sortByDate = (data = []) => {
+  return data?.sort((a, b) => {
+    const dateA = new Date(a?.date || "");
+    const dateB = new Date(b?.date || "");
+
+    return dateB - dateA;
+  });
+};
+
 export default function GlobalDetails() {
   const { id = "" } = useParams();
   const region = globalPresence.find((release) => release.id === id);
   const [orientations, setOrientations] = useState({});
-
-  console.log(orientations);
 
   const handleImageLoad = (index, event) => {
     const { naturalWidth, naturalHeight } = event.target;
@@ -38,7 +45,7 @@ export default function GlobalDetails() {
       </div>
 
       <div>
-        {region?.events?.map((event, index) => (
+        {sortByDate(region?.events)?.map((event, index) => (
           <div key={index} className="container mx-auto px-6 py-20 space-y-6">
             <div>
               <h1 className="text-4xl font-bold mb-6">{event?.title}</h1>

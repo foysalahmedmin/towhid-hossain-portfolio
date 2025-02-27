@@ -6,7 +6,7 @@ const pressReleases = [
     description:
       "In 2022, Towhid Hossain participated as a distinguished speaker at ICT WEEK Uzbekistan, a prestigious international event. He delivered an insightful presentation on the evolving landscape of IT and BPO industries, drawing attention to Bangladesh's growing contributions in these sectors. Towhid emphasized the critical role of global collaboration and innovation in driving technological advancements and shaping the future of the digital economy.",
     excerpt:
-      "At ICT WEEK Uzbekistan, the evolving landscape of IT and BPO industries was discussed, highlighting Bangladesh's growing contributions and the importance of global collaboration.",
+      "In 2022, A delegation from the Bangladesh Association of Contact Center and Outsourcing (BACCO) participated as special guests at Uzbekistan’s ICT Week 2022,where Towhid Hossain, BACCO’s secretary general was one of the speakers",
     link: "https://www.dainikeidin.com/2022/10/25/54073.html",
     images: [],
   },
@@ -17,7 +17,7 @@ const pressReleases = [
     description:
       "Towhid Hossain participated in a startup seminar with Information and Technology sector heads, where he discussed the growth potential of Bangladesh’s tech ecosystem. He emphasized the importance of fostering innovation, supporting startups, and creating a favorable environment for technological advancements. Towhid highlighted opportunities for collaboration between the government, private sector, and international tech leaders to drive sustainable growth. His insights focused on policy support, investment in research and development, and building infrastructure to support the growth of startups. His involvement reinforced his leadership in shaping the future of Bangladesh's rapidly evolving technology sector.",
     excerpt:
-      "The seminar focused on Bangladesh’s tech ecosystem, emphasizing innovation, collaboration, and policy support to drive sustainable growth for startups.",
+      "Startup seminar with Information and Technology sector heads, where Towhid Hossain discussed the growth potential of Bangladesh’s tech ecosystem. His insights focused on policy support, investment in research and development, and building infrastructure to support the growth of startups.",
     link: "",
     images: ["/press-releases/2.jpg"],
   },
@@ -28,7 +28,7 @@ const pressReleases = [
     description:
       "Towhid Hossain participated in the seminar on 'Women Digital Empowerment Through Technology,' where he emphasized the importance of empowering women through access to digital tools and technology. He discussed how technology can help bridge gender gaps, providing women with opportunities in entrepreneurship, education, and leadership roles. Towhid highlighted the role of digital literacy in enhancing women’s economic independence and contributing to social development. His insights stressed the need for policy support, training programs, and industry collaboration to foster a more inclusive digital economy. His participation reflected his commitment to promoting women’s empowerment through technological advancements.",
     excerpt:
-      "The seminar highlighted the importance of digital tools and technology in empowering women, bridging gender gaps, and fostering inclusive economic growth.",
+      "Technology can help bridge gender gaps, providing women with opportunities in entrepreneurship, education, and leadership roles'-Towhid Hossain. He also highlighted the role of digital literacy in enhancing women’s economic independence and contributing to social development.",
     link: "",
     images: ["/press-releases/3.jpg"],
   },

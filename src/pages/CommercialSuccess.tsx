@@ -1,10 +1,9 @@
 import {
   BarChart,
+  Briefcase,
   CheckCircle,
-  DollarSign,
-  Globe,
+  Leaf,
   Target,
-  TrendingUp,
   Trophy,
   Users,
 } from "lucide-react";
@@ -12,23 +11,23 @@ import {
 export default function CommercialSuccess() {
   const keyMetrics = [
     {
-      number: "150%",
+      number: "10%",
       label: "Revenue Growth",
       description: "Year-over-year growth through digital transformation",
     },
     {
-      number: "40%",
+      number: "20%",
       label: "Cost Reduction",
       description: "Operational cost savings through innovation",
     },
     {
-      number: "$50M+",
+      number: "$10M+",
       label: "Portfolio Value",
       description: "Strategic partnerships managed",
     },
     {
-      number: "25+",
-      label: "Global Markets",
+      number: "50+",
+      label: "National and Global Markets",
       description: "Successfully penetrated markets",
     },
   ];
@@ -36,35 +35,35 @@ export default function CommercialSuccess() {
   const achievements = [
     {
       icon: <Trophy className="w-12 h-12 text-blue-600" />,
-      title: "Revenue Growth",
+      title: "Business Growth",
       description:
-        "Led digital transformation initiatives resulting in 150% revenue growth over 3 years",
+        "Expanded BPO operations, creating 8,000+ jobs and increasing service capacity by 200%.",
       metrics: [
-        "$100M+ in new revenue",
-        "60% increase in digital sales",
-        "35% market share growth",
+        "$10M+ in outsourcing contracts secured",
+        "20% market expansion across multiple regions",
+        "60% increase in client acquisitions",
       ],
     },
     {
-      icon: <TrendingUp className="w-12 h-12 text-blue-600" />,
-      title: "Cost Optimization",
+      icon: <BarChart className="w-12 h-12 text-green-600" />,
+      title: "Operational Excellence",
       description:
-        "Implemented innovative solutions reducing operational costs by 40%",
+        "Enhanced workforce efficiency through training and process optimization, reducing costs by 20%.",
       metrics: [
-        "$20M annual savings",
-        "30% process efficiency improvement",
-        "50% reduction in manual tasks",
+        "$1M+ in annual savings through streamlined operations",
+        "30% improvement in process efficiency",
+        "30% reduction through sustainable alternatives",
       ],
     },
     {
-      icon: <DollarSign className="w-12 h-12 text-blue-600" />,
-      title: "Client Portfolio",
+      icon: <Users className="w-12 h-12 text-purple-600" />,
+      title: "Industry Leadership",
       description:
-        "Managed $50M+ worth of strategic partnerships with Fortune 500 companies",
+        "Managed large-scale partnerships, fostering sustainable growth in IT/ITES and BPO sectors.",
       metrics: [
-        "95% client retention rate",
-        "40+ active partnerships",
-        "20% YoY portfolio growth",
+        "$1M+ in strategic partnerships with global enterprises",
+        "50% client retention rate through service excellence",
+        "20k+ professionals trained under industry development programs",
       ],
     },
   ];
@@ -74,41 +73,43 @@ export default function CommercialSuccess() {
       icon: <Target className="w-8 h-8 text-blue-600" />,
       title: "Market Expansion",
       description:
-        "Strategic entry into 25+ new markets with localized approaches",
+        "Expanded BPO operations across 50+ markets, creating new job opportunities.",
     },
     {
-      icon: <Users className="w-8 h-8 text-blue-600" />,
-      title: "Team Building",
-      description: "Built high-performing teams across global offices",
+      icon: <Users className="w-8 h-8 text-green-600" />,
+      title: "Workforce Empowerment",
+      description:
+        "Trained and upskilled thousands, focusing on women and minority communities.",
     },
     {
-      icon: <BarChart className="w-8 h-8 text-blue-600" />,
-      title: "Data-Driven Decisions",
-      description: "Implemented advanced analytics for strategic planning",
+      icon: <Briefcase className="w-8 h-8 text-purple-600" />,
+      title: "Operational Excellence",
+      description:
+        "Built high-performing teams to enhance efficiency and service quality.",
     },
     {
-      icon: <Globe className="w-8 h-8 text-blue-600" />,
-      title: "Global Operations",
-      description: "Streamlined operations across international markets",
+      icon: <Leaf className="w-8 h-8 text-teal-600" />,
+      title: "Sustainability Initiatives",
+      description:
+        "Reduced carbon footprint by promoting jute products as a polymer alternative.",
     },
   ];
 
   const successStories = [
     {
-      company: "TechGlobal Solutions",
-      industry: "Technology",
-      achievement: "200% growth in 18 months",
+      company: "FIFOTech",
+      industry: "IT & Technology",
+      achievement: "100% growth in 5 years",
       impact: "Transformed digital infrastructure and expanded market presence",
-      image:
-        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
+      image: "/story-fifo-tech.jpg",
     },
     {
-      company: "InnovateCorp",
-      industry: "Manufacturing",
-      achievement: "40% cost reduction",
-      impact: "Modernized operations and improved efficiency",
-      image:
-        "https://images.unsplash.com/photo-1455849318743-b2233052fcff?auto=format&fit=crop&q=80&w=800",
+      company: "Golden Fiber Asia",
+      industry: "Sustainable Manufacturing ",
+      achievement: "30% cost reduction",
+      impact:
+        "Advocating for sustainability by reducing carbon footprints through eco-friendly products",
+      image: "/story-golden-fiber.jpg",
     },
   ];
 
@@ -116,17 +117,32 @@ export default function CommercialSuccess() {
     {
       year: "2023",
       title: "Record-Breaking Growth",
-      description: "Achieved highest revenue growth in company history",
+      description:
+        "Achieved the highest revenue growth in company history, solidifying market leadership.",
     },
     {
       year: "2022",
       title: "Global Expansion",
-      description: "Successfully entered 10 new international markets",
+      description:
+        "Successfully entered 10 new international markets, extending our global reach.",
     },
     {
       year: "2021",
       title: "Digital Transformation",
-      description: "Completed major digital infrastructure overhaul",
+      description:
+        "Launched significant digital infrastructure upgrades, driving operational efficiency.",
+    },
+    {
+      year: "2020",
+      title: "Job Creation",
+      description:
+        "Created over 8,000 new jobs, supporting economic growth through BPO operations.",
+    },
+    {
+      year: "2019",
+      title: "Sustainability Milestone",
+      description:
+        "Introduced eco-friendly jute-based products, reducing carbon footprint and promoting sustainable manufacturing.",
     },
   ];
 
@@ -137,8 +153,9 @@ export default function CommercialSuccess() {
         <div className="container mx-auto px-6 text-white">
           <h1 className="text-4xl font-bold mb-6">Commercial Success</h1>
           <p className="text-xl opacity-90 max-w-2xl">
-            Driving sustainable growth through strategic innovation, operational
-            excellence, and transformative leadership in global markets.
+            Achieving sustainable growth through strategic innovation,
+            operational excellence, and visionary leadership across national and
+            global markets.
           </p>
         </div>
       </div>
