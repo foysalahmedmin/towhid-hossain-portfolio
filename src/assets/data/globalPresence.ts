@@ -140,6 +140,8 @@ const globalPresence = [
           "/global-presence/3.1.jpg",
           "/global-presence/3.1.1.jpg",
           "/global-presence/3.1.2.jpg",
+          "/global-presence/3.1.3.jpg",
+          "/global-presence/3.1.4.jpg",
         ],
       },
       {
@@ -177,6 +179,38 @@ const globalPresence = [
           "/global-presence/3.4.jpg",
           "/global-presence/3.4.1.jpg",
           "/global-presence/3.4.2.jpg",
+        ],
+      },
+      {
+        id: 26,
+        date: "2023-01-01",
+        title: "Japan IT Week (Spring), 2023",
+        description:
+          "The Japan IT Week Spring in Tokyo is a premier event in the information technology industry, both in Japan and internationally. Towhid Hossain played a pivotal role at Japan IT Week (Spring) 2023, where he represented Bangladesh’s growing commitment to sustainable practices and the promotion of jute products. As a key figure at the event, he led discussions on the global shift toward eco-friendly alternatives, emphasizing the environmental and economic benefits of replacing polymers with jute. Towhid highlighted Bangladesh’s potential as a major supplier of jute products, fostering collaboration between Japanese and Bangladeshi businesses. His leadership at Japan IT Week strengthened international partnerships and positioned Bangladesh as a key player in the global movement toward sustainability, opening doors for future ventures in eco-friendly industries.",
+        excerpt:
+          "Towhid Hossain advocated for Bangladesh’s jute industry at Japan IT Week 2023, promoting sustainability and fostering international collaboration.",
+        link: "",
+        images: [
+          "/global-presence/3.5.jpg",
+          "/global-presence/3.5.1.jpg",
+          "/global-presence/3.5.2.jpg",
+          "/global-presence/3.5.3.jpg",
+        ],
+      },
+      {
+        id: 27,
+        date: "2023-01-01",
+        title: "CX Summit Malaysia 2022",
+        description:
+          "Towhid Hossain is an internationally recognized Customer Experience (CX) leader who has been implementing his proven methodology in Business Process Outsourcing (BPO) for over a decade. He recently participated in the CX Summit Malaysia, one of the largest CX-focused events in the Asia-Pacific region, renowned for fostering customer engagement and innovation. The summit serves as a platform for thought leadership, delivering critical business insights, and facilitating networking opportunities for industry professionals. Hossain’s involvement underscores his expertise in shaping CX strategies and advancing best practices across the global outsourcing landscape.",
+        excerpt:
+          "Towhid Hossain, a renowned CX leader, showcased his expertise at CX Summit Malaysia, contributing to global BPO innovation and best practices.",
+        link: "https://ccam.org.my/photo-gallery/cx-2022/",
+        images: [
+          "/global-presence/3.6.jpg",
+          "/global-presence/3.6.1.jpg",
+          "/global-presence/3.6.2.jpg",
+          "/global-presence/3.6.3.jpg",
         ],
       },
     ],
