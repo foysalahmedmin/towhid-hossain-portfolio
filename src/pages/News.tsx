@@ -1,11 +1,11 @@
 import { ArrowRight, Calendar, Globe, Tag, User } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import news from "../assets/data/news";
 import pressReleases from "../assets/data/pressReleases";
 
-import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -94,12 +94,15 @@ export default function News() {
 
         <div>
           <h2 className="text-2xl font-bold mb-8">Featured Story</h2>
-          <div>
+          <div className="relative">
             <Swiper
               spaceBetween={50}
               slidesPerView={1}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
-              navigation
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
               loop={true}
               modules={[Navigation, Autoplay]}
             >
@@ -112,10 +115,10 @@ export default function News() {
                         alt={news.title}
                         className="w-full h-full object-center object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/15"></div>
-                      <div className="absolute bottom-0 left-0 p-8 py-12 text-white">
-                        <div className="flex items-center space-x-4 mb-4">
-                          <span className="bg-blue-600 px-3 py-1 rounded-full text-sm">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-black/75 md:to-black/15"></div>
+                      <div className="absolute bottom-0 left-0 px-6 md:px-8 py-12 text-white">
+                        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-4">
+                          <span className="bg-blue-600 w-fit px-3 py-1 rounded-e-full md:rounded-full text-sm">
                             {news?.tags?.[0]}
                           </span>
                           <span className="flex items-center text-sm">
@@ -129,7 +132,7 @@ export default function News() {
                             </span>
                           )}
                         </div>
-                        <h3 className="text-3xl font-bold mb-4">
+                        <h3 className="text-2xl md:text-3xl font-bold mb-4">
                           {news?.title}
                         </h3>
                         <p className="text-gray-200 mb-4">{news?.excerpt}</p>
@@ -147,6 +150,8 @@ export default function News() {
                   </div>
                 </SwiperSlide>
               ))}
+              <div className="swiper-button-prev invisible sm:visible"></div>
+              <div className="swiper-button-next invisible sm:visible"></div>
             </Swiper>
           </div>
         </div>
@@ -172,8 +177,8 @@ export default function News() {
                         />
                       </div>
                       <div className="p-6 md:w-2/3">
-                        <div className="flex items-center space-x-4 mb-4">
-                          <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+                        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-4">
+                          <span className="bg-blue-100 w-fit text-blue-600 px-3 py-1 rounded-e-full md:rounded-full text-sm">
                             {item.tags?.[0]}
                           </span>
                           <span className="text-gray-500 text-sm flex items-center">
@@ -185,8 +190,8 @@ export default function News() {
                           {item.title}
                         </h3>
                         <p className="text-gray-600 mb-4">{item.excerpt}</p>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-4">
+                        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 justify-between">
+                          <div className="flex items-center gap-2 md:gap-4">
                             {item?.author && (
                               <span className="text-gray-500 text-sm flex items-center">
                                 <User className="w-4 h-4 mr-1" />
@@ -242,8 +247,8 @@ export default function News() {
                         : "hover:bg-gray-50"
                     }`}
                   >
-                    <span className="flex items-center">
-                      <Tag className="w-4 h-4 mr-2 text-blue-600" />
+                    <span className="flex items-start">
+                      <Tag className="w-5 h-5 shrink-0 mr-2 mt-[0.125rem] text-blue-600" />
                       {category.name}
                     </span>
                     <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-sm">
@@ -341,7 +346,7 @@ export default function News() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-l-full text-gray-900 focus:outline-none"
+                className="flex-1 w-full px-4 py-2 rounded-l-full text-gray-900 focus:outline-none"
               />
               <button className="bg-blue-900 px-6 py-2 rounded-r-full hover:bg-blue-800 transition-colors">
                 Subscribe

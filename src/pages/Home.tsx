@@ -15,7 +15,12 @@ import {
   Twitter,
   Users,
 } from "lucide-react";
+import { Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import news from "../assets/data/news";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 export default function Home() {
   const expertise = [
@@ -53,12 +58,12 @@ export default function Home() {
   ];
 
   const achievements = [
-    "Worked alongside top professionals in the BPO and IT/ITES sectors, gaining invaluable expertise.",
+    "Worked alongside top professionals in the BPO and IT/ITES sectors.",
     "Contributed to organizational growth by driving innovation and operational excellence.",
     "Played a key role in FIFOTech’s merger with two IT firms, forming a competitive consortium.",
-    "Recognized for leadership roles in BACCO, ISC, and ICT, driving industry policies and growth.",
+    "Recognized for leadership roles in BACCO, ISC, and ICT, driving industry growth.",
     "Created over 8,000 job placements, fostering employment opportunities.",
-    "Trained 20,000+ students under BACCO’s Skills for Employment Investment Program (SEIP) project, enhancing industry skills.",
+    "Trained 20,000+ students under BACCO’s Skills for Employment Investment Program (SEIP).",
   ];
 
   const testimonials = [
@@ -97,12 +102,19 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <header className="bg-gradient-to-r min-h-[60vh] flex items-center from-blue-600 to-blue-800 py-20">
-        <div className="container mx-auto px-6 text-white">
-          <div className="max-w-3xl">
+      <header className="relative min-h-[60vh] flex items-center overflow-hidden">
+        <img
+          src="/home-banner.png"
+          alt="Leading Role"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/80"></div>
+        <div className="relative h-full container mx-auto px-6 flex items-center">
+          <div className="text-white max-w-4xl">
             <h1 className="text-5xl font-bold mb-4">Towhid Hossain</h1>
             <p className="text-xl mb-6">
-              Project Management and BPO Professional
+              Visionary Leader in BPO & IT/ITES Innovation, Sustainability, and
+              Workforce Empowerment
             </p>
             <div className="flex space-x-4">
               <a
@@ -170,11 +182,11 @@ export default function Home() {
                 </div>
                 <div className="flex items-start space-x-2">
                   <Award className="text-blue-600" />
-                  <span>Leadership</span>
+                  <span>Outsourcing Innovation</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <Calendar className="text-blue-600" />
-                  <span>Project Management</span>
+                  <span>Workforce Empowerment</span>
                 </div>
               </div>
             </div>
@@ -279,7 +291,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">
             What People Say
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-xl relative">
                 <Quote className="w-8 h-8 text-blue-600 mb-4" />
@@ -293,6 +305,40 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div> */}
+          <div className="relative">
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={1}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              loop={true}
+              modules={[Navigation, Autoplay]}
+            >
+              {testimonials.map((testimonial, index) => (
+                <SwiperSlide key={index}>
+                  <div
+                    key={index}
+                    className="bg-gray-50 p-8 md:mx-40 rounded-xl relative"
+                  >
+                    <Quote className="w-8 h-8 text-blue-600 mb-4" />
+                    <p className="text-gray-700 mb-6 text-lg">
+                      {testimonial.quote}
+                    </p>
+                    <div>
+                      <p className="font-semibold">{testimonial.author}</p>
+                      <p className="text-gray-600">{testimonial.position}</p>
+                      <p className="text-blue-600">{testimonial.company}</p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+              <div className="swiper-button-prev invisible sm:visible"></div>
+              <div className="swiper-button-next invisible sm:visible"></div>
+            </Swiper>
           </div>
         </div>
       </section>

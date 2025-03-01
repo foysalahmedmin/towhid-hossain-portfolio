@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   BarChart,
   Briefcase,
   CheckCircle,
@@ -7,6 +8,7 @@ import {
   Trophy,
   Users,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CommercialSuccess() {
   const keyMetrics = [
@@ -108,38 +110,38 @@ export default function CommercialSuccess() {
       industry: "Sustainable Manufacturing ",
       achievement: "30% cost reduction",
       impact:
-        "Advocating for sustainability by reducing carbon footprints through eco-friendly products",
+        "Sustainable by reducing carbon footprints through eco-friendly products",
       image: "/story-golden-fiber.jpg",
     },
   ];
 
   const milestones = [
     {
-      year: "2023",
+      year: "2024",
       title: "Record-Breaking Growth",
       description:
         "Achieved the highest revenue growth in company history, solidifying market leadership.",
     },
     {
-      year: "2022",
+      year: "2023",
       title: "Global Expansion",
       description:
         "Successfully entered 10 new international markets, extending our global reach.",
     },
     {
-      year: "2021",
+      year: "2022",
       title: "Digital Transformation",
       description:
         "Launched significant digital infrastructure upgrades, driving operational efficiency.",
     },
     {
-      year: "2020",
+      year: "2021",
       title: "Job Creation",
       description:
         "Created over 8,000 new jobs, supporting economic growth through BPO operations.",
     },
     {
-      year: "2019",
+      year: "2020",
       title: "Sustainability Milestone",
       description:
         "Introduced eco-friendly jute-based products, reducing carbon footprint and promoting sustainable manufacturing.",
@@ -200,8 +202,8 @@ export default function CommercialSuccess() {
               </p>
               <ul className="space-y-3">
                 {achievement.metrics.map((metric, i) => (
-                  <li key={i} className="flex items-center space-x-2">
-                    <CheckCircle className="w-5 h-5 text-blue-600" />
+                  <li key={i} className="flex items-start space-x-2">
+                    <CheckCircle className="w-5 h-5 flex-shrink-0 text-blue-600" />
                     <span className="text-gray-700">{metric}</span>
                   </li>
                 ))}
@@ -235,7 +237,7 @@ export default function CommercialSuccess() {
           Success Stories
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
-          {successStories.map((story, index) => (
+          {successStories?.map((story, index) => (
             <div
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-lg"
@@ -246,14 +248,14 @@ export default function CommercialSuccess() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex gap-2 flex-col md:flex-row justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-semibold mb-1">
                       {story.company}
                     </h3>
                     <p className="text-gray-600">{story.industry}</p>
                   </div>
-                  <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+                  <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-e-full md:rounded-full text-sm">
                     {story.achievement}
                   </span>
                 </div>
@@ -261,6 +263,15 @@ export default function CommercialSuccess() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-6">
+          <Link
+            to="/leading-role"
+            className="inline-flex gap-2 hover:gap-4 transition-all duration-300 items-center bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90"
+          >
+            <span>More Stories</span>
+            <ArrowRight className="size-5" />
+          </Link>
         </div>
       </div>
 

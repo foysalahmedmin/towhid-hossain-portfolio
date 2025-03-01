@@ -22,7 +22,7 @@ export default function Awards() {
   const majorAwards = [
     {
       icon: <Trophy className="w-12 h-12 text-purple-500" />,
-      title: "Award for Outstanding Tech Company",
+      title: "Award for the Best Outstanding Tech Company",
       organization: "ASOCIO Summit Awards",
       year: "2022",
       description:
@@ -36,7 +36,7 @@ export default function Awards() {
     },
     {
       icon: <Award className="w-12 h-12 text-yellow-500" />,
-      title: "Award for the Best IT Company",
+      title: "National Award for the Best IT Company",
       organization: "National Award of Digital Bangladesh",
       year: "2020",
       description:
@@ -50,8 +50,8 @@ export default function Awards() {
     },
     {
       icon: <ShieldCheck className="w-12 h-12 text-blue-600" />,
-      title: "Award of Post & Telecom",
-      organization: "National Awards for Posts and Telecoms",
+      title: "National Award of Post & Telecommunication",
+      organization: "National Awards of Digital Bangladesh Fair",
       year: "2023",
       description:
         "Recognized for outstanding contributions to the Telecoms sector",
@@ -279,7 +279,7 @@ export default function Awards() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/80"></div>
         <div className="relative h-full container mx-auto px-6 flex items-center">
-          <div className="text-white max-w-3xl">
+          <div className="text-white max-w-4xl">
             <h1 className="text-4xl font-bold mb-6">Awards & Recognition</h1>
             <p className="text-xl opacity-90 max-w-2xl">
               A testament to excellence in business leadership, innovation, and
@@ -330,7 +330,7 @@ export default function Awards() {
                 <div className="space-y-2">
                   {award.impact.map((item, i) => (
                     <div key={i} className="flex items-start space-x-2">
-                      <CheckCircle className="w-5 h-5 text-blue-600 mt-[2px] flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{item}</span>
                     </div>
                   ))}
@@ -402,20 +402,20 @@ export default function Awards() {
             <div key={index} className="bg-gray-50 p-8 rounded-xl shadow-lg">
               <h3 className="text-xl font-semibold mb-4">{engagement.event}</h3>
               <div className="space-y-3">
-                <div className="flex items-center space-x-2">
-                  <Globe className="w-5 h-5 text-blue-600" />
+                <div className="flex items-start space-x-2">
+                  <Globe className="w-5 h-5 shrink-0 text-blue-600" />
                   <span>{engagement.location}</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Calendar className="w-5 h-5 text-blue-600" />
+                <div className="flex items-start space-x-2">
+                  <Calendar className="w-5 h-5 shrink-0 text-blue-600" />
                   <span>{engagement.date}</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Target className="w-5 h-5 text-blue-600" />
+                <div className="flex items-start space-x-2">
+                  <Target className="w-5 h-5 shrink-0 text-blue-600" />
                   <span>{engagement.topic}</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Users className="w-5 h-5 text-blue-600" />
+                <div className="flex items-start space-x-2">
+                  <Users className="w-5 h-5 shrink-0 text-blue-600" />
                   <span>{engagement.audience}</span>
                 </div>
               </div>
@@ -431,7 +431,7 @@ export default function Awards() {
             Interested in Speaking Engagements?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book John Anderson for your next event or conference
+            Book Towhid Hossain for your next event or conference
           </p>
           <a
             href="/contact"

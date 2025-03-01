@@ -219,7 +219,7 @@ export default function LeadingRole() {
   const achievements = [
     {
       icon: <Trophy className="w-12 h-12 text-purple-500" />,
-      title: "Award for Outstanding Tech Company",
+      title: "Award for the Best Outstanding Tech Company",
       organization: "ASOCIO Summit Awards",
       year: "2022",
       description:
@@ -233,7 +233,7 @@ export default function LeadingRole() {
     },
     {
       icon: <Award className="w-12 h-12 text-yellow-500" />,
-      title: "Award for the Best IT Company",
+      title: "National Award for the Best IT Company",
       organization: "National Award of Digital Bangladesh",
       year: "2020",
       description:
@@ -247,8 +247,8 @@ export default function LeadingRole() {
     },
     {
       icon: <ShieldCheck className="w-12 h-12 text-blue-600" />,
-      title: "Award of Post & Telecom",
-      organization: "National Awards for Posts and Telecoms",
+      title: "National Award of Post & Telecommunication",
+      organization: "National Awards of Digital Bangladesh Fair",
       year: "2023",
       description:
         "Recognized for outstanding contributions to the Telecoms sector",
@@ -290,7 +290,7 @@ export default function LeadingRole() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/80"></div>
         <div className="relative h-full container mx-auto px-6 flex items-center">
-          <div className="text-white max-w-3xl">
+          <div className="text-white max-w-4xl">
             <h1 className="text-4xl font-bold mb-6">Leadership & Impact</h1>
             <p className="text-xl opacity-90">
               Driving organizational excellence through strategic vision,
@@ -314,7 +314,7 @@ export default function LeadingRole() {
                   <h2 className="text-3xl font-bold mb-4">
                     {experience.position}
                   </h2>
-                  <div className="text-blue-600 text-lg mb-6">
+                  <div className="text-blue-600 text-lg mb-4 md:mb-6">
                     <a
                       className="hover:underline cursor-pointer"
                       href={experience?.websiteLink}
@@ -324,15 +324,14 @@ export default function LeadingRole() {
                     </a>{" "}
                     | <span>{experience?.period}</span>
                   </div>
-                  <p className="text-gray-700 mb-8">{experience.overview}</p>
+                  <p className="text-gray-700 mb-6 md:mb-8">
+                    {experience.overview}
+                  </p>
                   <div className="grid md:grid-cols-2 gap-4">
                     {experience.keyResponsibilities.map(
                       (responsibility, index) => (
-                        <div
-                          key={index}
-                          className="flex items-center space-x-2"
-                        >
-                          <CheckCircle className="w-5 h-5 text-blue-600" />
+                        <div key={index} className="flex items-start space-x-2">
+                          <CheckCircle className="w-5 h-5 shrink-0 text-blue-600" />
                           <span>{responsibility}</span>
                         </div>
                       )
@@ -420,7 +419,7 @@ export default function LeadingRole() {
                   <ul className="space-y-3">
                     {initiative.metrics.map((metric, i) => (
                       <li key={i} className="flex items-start space-x-2">
-                        <Zap className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                        <Zap className="w-5 h-5 text-blue-600 flex-shrink-0" />
                         <span className="text-gray-700">{metric}</span>
                       </li>
                     ))}

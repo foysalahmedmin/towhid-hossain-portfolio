@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -37,11 +37,12 @@ export default function Navbar() {
                     : "text-gray-600 hover:text-blue-600"
                 } transition-colors ${
                   item.label === "Contact"
-                    ? "bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700"
+                    ? "inline-flex gap-2 items-center bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-opacity-90 hover:text-white"
                     : ""
                 }`}
               >
                 {item.label}
+                {item.label === "Contact" && <ArrowRight className="size-5" />}
               </Link>
             ))}
           </div>

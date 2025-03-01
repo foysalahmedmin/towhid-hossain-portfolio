@@ -37,7 +37,7 @@ export default function GlobalDetails() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/80"></div>
         <div className="relative h-full container mx-auto px-6 flex items-center">
-          <div className="text-white max-w-3xl">
+          <div className="text-white max-w-4xl">
             <h1 className="text-5xl font-bold mb-6">{region?.region}</h1>
             <p className="text-xl opacity-90">{region?.excerpt}</p>
           </div>
@@ -49,7 +49,7 @@ export default function GlobalDetails() {
           <div key={index} className="container mx-auto px-6 py-20 space-y-6">
             <div>
               <h1 className="text-4xl font-bold mb-6">{event?.title}</h1>
-              <p className="opacity-90 text-xl">{event?.description}</p>
+              <p className="opacity-90 md:text-xl">{event?.description}</p>
             </div>
             <div className="inline-flex flex-wrap justify-start gap-4">
               {event?.images?.map((image, i) => (

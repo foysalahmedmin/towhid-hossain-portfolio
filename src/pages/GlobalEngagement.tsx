@@ -189,8 +189,8 @@ export default function GlobalEngagement() {
                         <h4 className="font-semibold mb-4">Key Initiatives</h4>
                         <ul className="space-y-3">
                           {region.initiatives.map((initiative, i) => (
-                            <li key={i} className="flex items-center space-x-2">
-                              <CheckCircle className="w-5 h-5 text-blue-600" />
+                            <li key={i} className="flex items-start space-x-2">
+                              <CheckCircle className="w-5 h-5 shrink-0 text-blue-600" />
                               <span>{initiative}</span>
                             </li>
                           ))}
@@ -202,9 +202,9 @@ export default function GlobalEngagement() {
                           {region.keyMarkets.map((market, i) => (
                             <div
                               key={i}
-                              className="flex items-center space-x-2 text-gray-600"
+                              className="flex items-start space-x-2 text-gray-600"
                             >
-                              <MapPin className="w-4 h-4 text-blue-600" />
+                              <MapPin className="w-5 h-5 shrink-0 text-blue-600" />
                               <span>{market}</span>
                             </div>
                           ))}
@@ -235,7 +235,7 @@ export default function GlobalEngagement() {
                 <div className="space-y-3">
                   {initiative.achievements.map((achievement, i) => (
                     <div key={i} className="flex items-start space-x-2">
-                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-700">{achievement}</span>
                     </div>
                   ))}

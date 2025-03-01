@@ -22,7 +22,7 @@ export default function PressDetails() {
       <div className="container mx-auto px-6 py-20 space-y-6">
         <div>
           <h1 className="text-4xl font-bold mb-6">Description</h1>
-          <p className="opacity-90 text-xl">{press?.description}</p>
+          <p className="opacity-90 md:text-xl">{press?.description}</p>
         </div>
         <div className="space-y-6">
           {press?.images?.map((image, index) => (
