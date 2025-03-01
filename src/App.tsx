@@ -1,32 +1,100 @@
+import { lazy, Suspense } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Loading from "./components/Loading";
 import Navbar from "./components/Navbar";
-import Awards from "./pages/Awards";
-import CommercialSuccess from "./pages/CommercialSuccess";
-import Contact from "./pages/Contact";
-import GlobalDetails from "./pages/GlobalDetails";
-import GlobalEngagement from "./pages/GlobalEngagement";
-import Home from "./pages/Home";
-import LeadingRole from "./pages/LeadingRole";
-import News from "./pages/News";
-import PressDetails from "./pages/PressDetails";
+
+// Lazy-loaded components
+const Home = lazy(() => import("./pages/Home"));
+const CommercialSuccess = lazy(() => import("./pages/CommercialSuccess"));
+const LeadingRole = lazy(() => import("./pages/LeadingRole"));
+const Awards = lazy(() => import("./pages/Awards"));
+const News = lazy(() => import("./pages/News"));
+const GlobalEngagement = lazy(() => import("./pages/GlobalEngagement"));
+const Contact = lazy(() => import("./pages/Contact"));
+const PressDetails = lazy(() => import("./pages/PressDetails"));
+const GlobalDetails = lazy(() => import("./pages/GlobalDetails"));
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/commercial-success" element={<CommercialSuccess />} />
-          <Route path="/leading-role" element={<LeadingRole />} />
-          <Route path="/awards" element={<Awards />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/global-engagement" element={<GlobalEngagement />} />
-          <Route path="/contact" element={<Contact />} />
-
-          <Route path="/press-releases/:id" element={<PressDetails />} />
-          <Route path="/global-presence/:id" element={<GlobalDetails />} />
-        </Routes>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/commercial-success"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <CommercialSuccess />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/leading-role"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <LeadingRole />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/awards"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Awards />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/news"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <News />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/global-engagement"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <GlobalEngagement />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Contact />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/press-releases/:id"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <PressDetails />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/global-presence/:id"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <GlobalDetails />
+                </Suspense>
+              }
+            />
+          </Routes>
+        </Suspense>
       </div>
     </Router>
   );
