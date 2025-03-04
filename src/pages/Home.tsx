@@ -106,9 +106,9 @@ export default function Home() {
         <img
           src="/home-banner.png"
           alt="Leading Role"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/50"></div>
         <div className="relative h-full container mx-auto px-6 flex items-center">
           <div className="text-white max-w-4xl">
             <h1 className="text-5xl font-bold mb-4">Towhid Hossain</h1>

@@ -101,7 +101,7 @@ export default function Awards() {
         "Recognized for promoting innovation and consistency",
         "Celebrated for empowering young minds to excel globally",
       ],
-      link: "#",
+      link: "",
     },
     {
       icon: <BookOpen className="w-12 h-12 text-yellow-500" />,
@@ -115,7 +115,7 @@ export default function Awards() {
         "Recognized for dedication to skill enhancement",
         "Celebrated for advancing the BPO industry in Bangladesh",
       ],
-      link: "#",
+      link: "",
     },
     {
       icon: <Lightbulb className="w-12 h-12 text-blue-500" />,
@@ -129,7 +129,7 @@ export default function Awards() {
         "Celebrated for advancing Bangladesh’s digital landscape",
         "Acknowledged for driving innovation for a Smart Bangladesh",
       ],
-      link: "#",
+      link: "",
     },
     {
       icon: <ShieldCheck className="w-12 h-12 text-green-500" />,
@@ -143,7 +143,7 @@ export default function Awards() {
         "Recognized for strengthening cybersecurity measures",
         "Celebrated for promoting a safer online environment",
       ],
-      link: "#",
+      link: "",
     },
     {
       icon: <Briefcase className="w-12 h-12 text-yellow-500" />,
@@ -157,7 +157,7 @@ export default function Awards() {
         "Recognized for leadership in driving BPO sector growth",
         "Celebrated for inspiring diverse talents to pursue careers in BPO",
       ],
-      link: "#",
+      link: "",
     },
     {
       icon: <CheckCircle className="w-12 h-12 text-yellow-500" />,
@@ -171,7 +171,7 @@ export default function Awards() {
         "Celebrated for fostering cultural heritage and diversity",
         "Acknowledged for positive impact on the Little Bangladesh community",
       ],
-      link: "#",
+      link: "",
     },
     {
       icon: <UserCheck className="w-12 h-12 text-pink-500" />,
@@ -184,7 +184,7 @@ export default function Awards() {
         "Celebrated for fostering global opportunities for female entrepreneurs",
         "Appreciated for promoting gender equality in entrepreneurship",
       ],
-      link: "#",
+      link: "",
     },
   ];
 
@@ -335,16 +335,18 @@ export default function Awards() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-6">
-                  <a
-                    className="text-blue-600 inline-flex items-center gap-2 cursor-pointer hover:underline"
-                    target="_blank"
-                    href={award?.link}
-                  >
-                    <span>Read More</span>
-                    <ArrowRight className="size-4" />
-                  </a>
-                </div>
+                {award?.link && (
+                  <div className="mt-6">
+                    <a
+                      className="text-blue-600 inline-flex items-center gap-2 cursor-pointer hover:underline"
+                      target="_blank"
+                      href={award?.link}
+                    >
+                      <span>Read More</span>
+                      <ArrowRight className="size-4" />
+                    </a>
+                  </div>
+                )}
               </div>
             ))}
         </div>
